@@ -12,7 +12,7 @@ export default function App() {
     <>
     <View style={styles.container}>
       <Text style={styles.header}>Lunch Spot</Text>
-      <RestList />
+      <RestList selectRestaurant={selectRestaurant}/>
       <StatusBar style="auto" />
     </View>
     <Tray setSelectRestaurant={setSelectRestaurant} />
@@ -31,5 +31,6 @@ const styles = StyleSheet.create({
   header: {
     color: 'white',
     fontSize: 36,
+    fontWeight: 800,
   },
 });
