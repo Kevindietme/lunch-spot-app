@@ -7,11 +7,21 @@ export default function Tray({ setSelectRestaurant }) {
         setSelectRestaurant(chosen)
     }
 
+    const clear = () => {
+        setSelectRestaurant(0)
+    }
+
     return(
         <View style={styles.tray}>
-                <TouchableOpacity onPress={choose} style={styles.button}>
+          <View style={styles.buttonList}>
+            <TouchableOpacity onPress={choose} style={styles.button}>
                     <Text style={styles.buttonText}>Shuffle</Text>
-                </TouchableOpacity>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={clear} style={styles.resetButton}>
+                    <Text style={styles.buttonText}>Reset</Text>
+            </TouchableOpacity>
+          </View>
         </View>
     )
 }
@@ -27,9 +37,26 @@ const styles = StyleSheet.create({
         borderColor: 'black',
     },
 
+    buttonList: {
+        flexDirection: 'row',
+        width: '80%',
+        justifyContent: "space-evenly",
+    },
+
+    resetButton: {
+        backgroundColor: 'grey',
+        paddingHorizontal: 24, 
+        paddingVertical: 10,
+        borderRadius: 4,
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor: 1,
+        
+    },
+
     buttonText: {
         color: 'white',
-        fontsize: 20,
+        fontSize: 20,
         fontWeight: 800,
     },
     tray: {
@@ -39,6 +66,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingBottom: 10,
-    }
+    },
 })
 
