@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
     <View style={styles.container}>
-      <Text style={styles.header}>Lunch Spot</Text>
+      <Text style={styles.header}>🍽️ Lunch Spot</Text>
       <RestList selectRestaurant={selectRestaurant}/>
       <StatusBar style="auto" />
     </View>
@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 60,
-    backgroundColor: '#2262fe',
+    backgroundColor: '#f9ebe0',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   header: {
-    color: 'white',
+    color: '#232323',
     fontSize: 36,
     fontWeight: 800,
   },

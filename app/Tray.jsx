@@ -15,11 +15,11 @@ export default function Tray({ setSelectRestaurant }) {
         <View style={styles.tray}>
           <View style={styles.buttonList}>
             <TouchableOpacity onPress={choose} style={styles.button}>
-                    <Text style={styles.buttonText}>Shuffle</Text>
+                    <Text style={styles.buttonText}>Shuffle Now</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={clear} style={styles.resetButton}>
-                    <Text style={styles.buttonText}>Reset</Text>
+                        <TouchableOpacity onPress={clear} style={[styles.resetButton]}>
+                    <Text style={[styles.buttonText, styles.resetButtonText]}>Reset</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -28,13 +28,13 @@ export default function Tray({ setSelectRestaurant }) {
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: 'red',
+        backgroundColor: '#ed714d',
         paddingHorizontal: 24,
-        paddingVertical: 10,
-        borderRadius: 5,
+        paddingVertical: 8,
+        borderRadius: 20,
+        borderWidth: 2,
         borderStyle: 'solid',
-        borderWidth: 1,
-        borderColor: 'black',
+        borderColor: "f79477",
     },
 
     buttonList: {
@@ -44,13 +44,10 @@ const styles = StyleSheet.create({
     },
 
     resetButton: {
-        backgroundColor: 'grey',
-        paddingHorizontal: 24, 
-        paddingVertical: 10,
-        borderRadius: 4,
-        borderStyle: 'solid',
-        borderWidth: 1,
-        borderColor: 1,
+        backgroundColor: '#f4f5f6',
+        paddingHorizontal: 24,
+        paddingVertical: 8,
+        borderRadius: 20,
         
     },
 
@@ -59,13 +56,38 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 800,
     },
+
+    resetButtonText: {
+        color: '#777',
+
+    },
+
+    resetButton: {
+        backgroundColor: '#f4f5f6',
+        borderStyle: 'solid',
+        borderWidth: 2,
+        borderColor: '#ed714d',
+        paddingHorizontal: 24,
+        paddingVertical: 8,
+        borderRadius: 20,
+    },
+
     tray: {
         width: '100%',
-        height: 70,
+        height: 120,
         backgroundColor: '#e9eeff',
+        paddingTop: 30,
+        paddingBottom: 30,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingBottom: 10,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: -10,
+        },
+        shadowOpacity: 0.11,
+        shadowRadius: 9.5,
+        elevation: 15,
     },
 })
 
